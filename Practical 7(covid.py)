@@ -36,6 +36,7 @@ np.mean(world_new_cases)
 #make plot
 plt.boxplot(world_new_cases, vert=True, whis=1.5, patch_artist=True, meanline=True, showbox=True, showcaps=True, showfliers=True, notch=False)
 np.mean(world_new_cases)
+plt.title('boxplot of the world new cases')
 
 #plot the new death and new cases
 c=covid_data.loc[:,'location']=='World'
@@ -47,7 +48,7 @@ world_new_deaths=covid_data.loc[d,'new_deaths']
 plt.plot(world_new_cases, world_new_deaths, 'r+')
 plt.ylabel('World new deaths')
 plt.xlabel('World new cases')
-plt.title('Daily new cases and new death of novel corona virus')
+plt.title('New cases and new death of novel corona virus everyday')
 #make a boxplot of the total cases on 2020/3/10
 cases=covid_data.loc[:,'date']=='2020/3/10'
 new_cases=[]
@@ -69,3 +70,4 @@ plt.boxplot(Match_new_cases,
             vert=True,whis=1.5,patch_artist=True,
             meanline=True,showbox=True,showcaps=True,
             showfliers=True,notch=False)
+#this plot shows the new causes on 2020/3/10
