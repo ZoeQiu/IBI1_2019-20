@@ -1,0 +1,2 @@
+To investage the genetic relationship between huaman, mouse and random sequence, I used loops to compare two among then respectively on by on.
+If a pair of identical amino acids is detected, the distance value will be increased by 1, which means the bigger the distance value is, the more distant the relationship
