@@ -1,0 +1,71 @@
+#import the csv file into python
+import os
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+os.getcwd()
+os.chdir("C:\\Users\\hh\\Desktop")
+covid_data = pd.read_csv("full_data.csv")
+#showing all columns, and every third row between
+covid_data.iloc[0:15:3,0:5]
+
+#show'total cases' of Afghanistan
+location=covid_data.loc[:,'location']=='Afghanistan'
+data_afganistan=[]
+covid_data.describe()
+for i in range(0,7996):
+    if location[i]==True:
+        data_afganistan.append(i)
+column=[False,False,False,False,True,False]
+Afghanistan_totalcases=covid_data.iloc[data_afganistan,column]
+print(Afghanistan_totalcases)
+
+#store the data of the new cases for the entire world
+a=covid_data.loc[:,'location']=='World'
+b=[]
+
+for i in range(0,7996):
+    if a[i]==True:
+        b.append(i)
+world_new_cases=covid_data.loc[b,'new_cases']        
+
+#calculate the median and mean of the world new cases
+np.median(world_new_cases)
+np.mean(world_new_cases)
+
+#make plot
+plt.boxplot(world_new_cases, vert=True, whis=1.5, patch_artist=True, meanline=True, showbox=True, showcaps=True, showfliers=True, notch=False)
+np.mean(world_new_cases)
+
+#plot the new death and new cases
+c=covid_data.loc[:,'location']=='World'
+d=[]
+for i in range(0,7996):
+    if c[i]==True:
+        d.append(i)
+world_new_deaths=covid_data.loc[d,'new_deaths']
+plt.plot(world_new_cases, world_new_deaths, 'r+')
+plt.ylabel('World new deaths')
+plt.xlabel('World new cases')
+plt.title('Daily new cases and new death of novel corona virus')
+#make a boxplot of the total cases on 2020/3/10
+cases=covid_data.loc[:,'date']=='2020/3/10'
+new_cases=[]
+
+for i in range(0,7996):
+    if cases[i]==True:
+        new_cases.append(i)
+Match_new_cases=covid_data.loc[new_cases,'new_cases']
+
+cases=covid_data.loc[:,'date']=='2020/3/10'
+new_cases=[]
+
+for i in range(0,7996):
+    if cases[i]==True:
+        new_cases.append(i)
+Match_new_cases=covid_data.loc[new_cases,'total_cases']
+
+plt.boxplot(Match_new_cases,
+            vert=True,whis=1.5,patch_artist=True,
+            meanline=True,showbox=True,showcaps=True,
+            showfliers=True,notch=False)
