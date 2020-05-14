@@ -25,4 +25,7 @@ for i in range(len(human)):
 print('the genetic distance between human and random'+":"+str(d1))
 print('the genetic distance between human and mouse'+":"+str(d2))
 print('the genetic distance between mouse and random'+":"+str(d3))
-#from the result, we can draw a conclusion that mouse is more familar with huaman than random sequence, genetically.
+#the genetic distance between human and random:210
+#the genetic distance between human and mouse:23
+#the genetic distance between mouse and random:209
+#The bigger the distance value is, the distant the relationship is, so we can draw a conclusion that mouse is more familar with huaman than random sequence.
