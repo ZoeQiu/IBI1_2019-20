@@ -1,0 +1,10 @@
+how the practical went. For instance: Was it easy? Was
+it hard? 
+The first two parts went smoothly,but I found the third one was confusing so I used the  code snippet provide by the professor.
+But I still did not take the situation that the random point is right on the boundary.
+
+Were there bits you enjoyed more (or less) than others?
+I enjoyed creat some simple method to solve problem than others. For instance, after discusssion with others, I used a forloop to change the 
+vaccination rates instead of just repeating the same progress again to change the rate.
+What was the most important thing you learned?
+The most import thing that I learned is how to simulate and solve real-world problems by using probabilistic models.
