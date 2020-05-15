@@ -35,18 +35,17 @@ for t in range(100):
                             population[xNeighbour,yNeighbour]=np.random.choice(range(2),1,p=[1-beta,beta])[0]
                     
             
- #draw four plot
-    if t == 0:
+ #draw plot several times to see if the results are different
+probabilistic model
+    if t == 66:
+        pltfigure(figsize=(6,4),dpi=150)
+        plt.imshow(population,cmap='viridis',interpolation='nearest')
+    elif t ==99:
         plt.figure(figsize=(6,4),dpi=150)
         plt.imshow(population,cmap='viridis',interpolation='nearest')
-    elif t == 9:
+    elif t == 3:
         plt.figure(figsize=(6,4),dpi=150)
         plt.imshow(population,cmap='viridis',interpolation='nearest')
-    elif t == 49:
-        plt.figure(figsize=(6,4),dpi=150)
-        plt.imshow(population,cmap='viridis',interpolation='nearest')
-    elif t == 99:
-        plt.figure(figsize=(6,4),dpi=150)
-        plt.imshow(population,cmap='viridis',interpolation='nearest')
+
                             
     
